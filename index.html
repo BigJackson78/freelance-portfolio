@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to my Freelance Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Jackson Whitaker</h1>
+    <p>Web Developer | Cloud Student | Freelancer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>Hi, I’m Jackson Whitaker — a self-taught web developer and cloud technology student with a passion for building real-world projects that solve real problems. I'm currently earning my degree in cloud technologies while sharpening my skills in HTML, CSS, Python, and AWS.</p>
+    <p>I specialize in creating clean, responsive websites and beginner-friendly tools, and I enjoy learning by doing. Whether it’s building a weather app or deploying cloud services, I focus on delivering simple, effective solutions.</p>
+    <p>When I’m not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with others.</p>
+    <p> Feel free to connect with me on gmail or text me at 502-203-2172</p>
+  </section>
+  <div class= 'skills-list'>
+    <h2>Skills</h2>
+<ul>
+  <li>💻 HTML, CSS, JavaScript (Beginner)</li>
+  <li>☁ AWS Cloud (Studying for Certification)</li>
+  <li>🐍 Python (Web Apps, APIs)</li>
+  <li>📦 Git & GitHub (Version Control)</li>
+</ul>
+</div>  
+  <section id="projects" class="slide-in-left">
+    <h2>Projects</h2>
+    <ul>
+      <li>☁ AWS Cloud Portfolio (In Progress)</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact Info</h2>
+    <p>Email: <a href="mailto:jjwhit78@gmail.com">jjwhit78@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/BigJackson78" target="_blank">My GitHub Link</a></p>
+    <a href="mailto:jjwhit78@gmail.com" 
+class="button">Email Me</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jackson Whitaker</p>
+  </footer>
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in, .slide-in-left').forEach(el => {
+    el.classList.add('hidden');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
