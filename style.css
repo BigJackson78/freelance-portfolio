@@ -1,183 +1,110 @@
-/* FONT & GLOBAL STYLES */
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Base styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+  padding-bottom: 50px;
+}
+
+/* Header section */
 header {
-  background-color: #1f2937;
-  color: #ffffff;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  border-radius: 0 0 16px 16px;
+  transition: all 0.3s ease-in-out;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.2rem;
-  opacity: 0.9;
 }
 
-/* NAVIGATION */
+/* Navigation */
 nav {
-  background-color: #111827;
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 12px 0;
+  background-color: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
-  color: white;
+  color: #333;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #60a5fa;
+  color: #1e3c72;
 }
 
-/* SECTIONS */
+/* Sections */
 section {
+  padding: 60px 20px;
   max-width: 800px;
-  background: white;
-  margin: 40px auto;
-  padding: 30px;
+  margin: auto;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.01);
 }
 
 section h2 {
-  color: #1f2937;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 10px;
+  font-size: 2rem;
   margin-bottom: 20px;
+  color: #1e3c72;
 }
 
-/* LISTS */
-ul {
-  list-style-type: none;
-  padding-left: 0;
+section p,
+section li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
-ul li {
-  padding: 8px 0;
-  font-size: 1.05rem;
+/* Contact links */
+#contact a {
+  color: #2a5298;
+  text-decoration: underline;
 }
 
-/* LINKS */
-a {
-  color: #2563eb;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #1d4ed8;
-}
-
-/* BUTTONS */
-.btn {
-  background-color: #2563eb;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
+#contact a:hover {
   text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 10px;
 }
 
-.btn:hover {
-  background-color: #1d4ed8;
-  transform: scale(1.05);
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-  background-color: #1f2937;
-  color: white;
   text-align: center;
   padding: 20px;
+  color: #555;
+  background-color: #e8e8e8;
   margin-top: 40px;
+  border-top: 1px solid #ccc;
 }
 
-footer p {
-  margin: 0;
-}
-
-/* SKILLS LIST */
-.skills-list {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.skills-list ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0 auto;
-  max-width: 400px;
-}
-
-.skills-list li {
-  padding: 8px 0;
-  font-size: 1.05rem;
-}
-
-/* ANIMATIONS - TRIGGER ON SCROLL */
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-
-/* ANIMATIONS - TRIGGER ON SCROLL */
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-.show.fade-in {
-  animation: fadeIn 1s ease forwards;
-}
-
-.show.slide-in-left {
-  animation: slideLeft 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* RESPONSIVE DESIGN */
+/* Responsive design */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -189,7 +116,6 @@ footer p {
   }
 
   section {
-    margin: 20px;
-    padding: 20px;
+    padding: 30px 15px;
   }
 }
